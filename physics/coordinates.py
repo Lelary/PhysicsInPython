@@ -21,12 +21,12 @@ def cylindrical_to_cartesian(r, theta, z):
     return x, y, z
 
 def cartesian_to_spherical(x, y, z):
-    d, phi = cartesian_to_polar(x, y)
-    r, theta = cartesian_to_polar(z, d)
-    return r, phi, theta
+    d, theta = cartesian_to_polar(x, y)
+    r, phi = cartesian_to_polar(z, d)
+    return r, theta, phi
 
-def spherical_to_cartesian(r, phi, theta):
-    z, d = polar_to_cartesian(r, theta)
-    x, y = polar_to_cartesian(d, phi)
+def spherical_to_cartesian(r, theta, phi):
+    z, d = polar_to_cartesian(r, phi)
+    x, y = polar_to_cartesian(d, theta)
     return x, y, z
 
